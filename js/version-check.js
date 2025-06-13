@@ -144,14 +144,14 @@ function addVersionInfoToFooter() {
                 发现新版
             </span>`;
             
-            setTimeout(() => {
-                const updateBtn = versionElement.querySelector('span');
-                if (updateBtn) {
-                    updateBtn.addEventListener('click', () => {
-                        window.open('https://github.com/LibreSpark/LibreTV', '_blank');
-                    });
-                }
-            }, 100);
+            // setTimeout(() => {
+            //     const updateBtn = versionElement.querySelector('span');
+            //     if (updateBtn) {
+            //         updateBtn.addEventListener('click', () => {
+            //             //window.open('https://github.com/LibreSpark/LibreTV', '_blank');
+            //         });
+            //     }
+            // }, 100);
         } else {
             // 如果没有更新，显示当前版本为最新版本
             versionElement.innerHTML = `版本: ${result.currentFormatted} <span class="text-green-500">(最新版本)</span>`;
