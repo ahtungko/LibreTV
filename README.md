@@ -1,14 +1,14 @@
-# iXkaTv - 免费在线视频搜索与观看平台
+# XkaTV - 免费在线视频搜索与观看平台
 
 <div align="center">
-  <img src="image/logo.png" alt="iXkaTv Logo" width="120">
+  <img src="image/logo.png" alt="XkaTV Logo" width="120">
   <br>
   <p><strong>自由观影，畅享精彩</strong></p>
 </div>
 
 ## 📺 项目简介
 
-iXkaTv 是一个轻量级、免费的在线视频搜索与观看平台，提供来自多个视频源的内容搜索与播放服务。无需注册，即开即用，支持多种设备访问。项目结合了前端技术和后端代理功能，可部署在支持服务端功能的各类网站托管服务上。
+XkaTV 是一个轻量级、免费的在线视频搜索与观看平台，提供来自多个视频源的内容搜索与播放服务。无需注册，即开即用，支持多种设备访问。项目结合了前端技术和后端代理功能，可部署在支持服务端功能的各类网站托管服务上。
 
 本项目基于 [bestK/tv](https://github.com/bestK/tv) 进行重构与增强。
 
@@ -24,9 +24,9 @@ iXkaTv 是一个轻量级、免费的在线视频搜索与观看平台，提供�
 
 ## 🚀 快速部署
 
-选择以下任一平台，点击一键部署按钮，即可快速创建自己的 iXkaTv 实例：
+选择以下任一平台，点击一键部署按钮，即可快速创建自己的 XkaTV 实例：
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLibreSpark%2FiXkaTv)  
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLibreSpark%2FXkaTV)  
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LibreSpark/LibreTV)  
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/LibreSpark/LibreTV) 
 
@@ -91,12 +91,12 @@ Pull Bot 会反复触发无效的 PR 和垃圾邮件，严重干扰项目维护�
 ### Docker
 ```
 docker run -d \
-  --name iXkaTv \
+  --name XkaTV \
   --restart unless-stopped \
   -p 8899:8080 \
   -e PASSWORD=your_password \
   -e ADMINPASSWORD=your_adminpassword \
-  bestzwei/iXkaTv:latest
+  bestzwei/XkaTV:latest
 ```
 
 ### Docker Compose
@@ -105,9 +105,9 @@ docker run -d \
 
 ```yaml
 services:
-  iXkaTv:
-    image: bestzwei/iXkaTv:latest
-    container_name: iXkaTv
+  XkaTV:
+    image: bestzwei/XkaTV:latest
+    container_name: XkaTV
     ports:
       - "8899:8080" # 将内部 8080 端口映射到主机的 8899 端口
     environment:
@@ -115,7 +115,7 @@ services:
       - ADMINPASSWORD=${PASSWORD:-your_adminpassword} # 可将 your_adminpassword 修改为你想要的密码，默认为 your_adminpassword
     restart: unless-stopped
 ```
-启动 iXkaTv：
+启动 XkaTV：
 
 ```bash
 docker compose up -d
@@ -145,7 +145,7 @@ npm run dev
 
 ### 密码保护
 
-要为您的 iXkaTv 实例添加密码保护，可以在部署平台上设置环境变量：
+要为您的 XkaTV 实例添加密码保护，可以在部署平台上设置环境变量：
 
 **环境变量名**: `PASSWORD` 
 **值**: 您想设置的密码
@@ -164,7 +164,7 @@ npm run dev
 
 ### API兼容性
 
-iXkaTv 支持标准的苹果 CMS V10 API 格式。添加自定义 API 时需遵循以下格式：
+XkaTV 支持标准的苹果 CMS V10 API 格式。添加自定义 API 时需遵循以下格式：
 - 搜索接口: `https://example.com/api.php/provide/vod/?ac=videolist&wd=关键词`
 - 详情接口: `https://example.com/api.php/provide/vod/?ac=detail&ids=视频ID`
 
@@ -195,7 +195,7 @@ iXkaTv 支持标准的苹果 CMS V10 API 格式。添加自定义 API 时需遵�
 
 ## ⚠️ 免责声明
 
-iXkaTv 仅作为视频搜索工具，不存储、上传或分发任何视频内容。所有视频均来自第三方 API 接口提供的搜索结果。如有侵权内容，请联系相应的内容提供方。
+XkaTV 仅作为视频搜索工具，不存储、上传或分发任何视频内容。所有视频均来自第三方 API 接口提供的搜索结果。如有侵权内容，请联系相应的内容提供方。
 
 本项目开发者不对使用本项目产生的任何后果负责。使用本项目时，您必须遵守当地的法律法规。
 
