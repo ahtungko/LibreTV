@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 try {
                     window.history.replaceState(
                         { search: keyword }, 
-                        `搜索: ${keyword} - XkaTV`, 
+                        `搜索: ${keyword} - iXkaTv`, 
                         window.location.href
                     );
                 } catch (e) {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 window.history.replaceState(
                     { search: searchQuery }, 
-                    `搜索: ${searchQuery} - XkaTV`, 
+                    `搜索: ${searchQuery} - iXkaTv`, 
                     `/s=${encodeURIComponent(searchQuery)}`
                 );
             } catch (e) {
